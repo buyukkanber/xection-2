@@ -53,3 +53,12 @@ function newElement() {
     }
   }
 }
+
+// Create a new list item when press Enter on Keyboard
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("enter").click();
+  }
+});
